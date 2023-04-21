@@ -1,0 +1,340 @@
+@font-face {
+    font-family: newyork;
+    src:url(./fonts/NewYork\ PERSONAL\ USE.otf)
+}
+@font-face {
+    font-family: euclid;
+    src: url(./fonts/Euclid\ Circular\ A\ Regular.ttf);
+}
+@font-face {
+    font-family: euclid-b;
+    src: url(./fonts/Euclid\ Circular\ A\ Bold.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: solid; */
+}
+:root {
+    --bgcolor:#272422;
+    --maincolor:White;
+    --seccolor: #E8BF96 ;
+    --thirdcolor:#999999;
+    --mainfont:"newyork";
+    --font-b:"euclid-b";
+    --n-font:"euclid";
+    --smallfontsize: clamp(0.55rem, -0.0938rem + 2.25vw, 1.375rem);
+    --bigfontsize: clamp(15.25rem, 12.97rem + 6.92vw, 15.29rem);
+    --midfontsize: clamp(3.25rem, 3.97rem + 6.92vw, 3.29rem);
+}
+
+/* general style */
+
+html {
+    font-size: 62.5%;
+    color:var(--maincolor)
+}
+a {
+    text-decoration: none;
+    font-family: var(--font-b);
+    font-size: var(--smallfontsize);
+    color: var(--maincolor);
+}
+img {
+    max-width: 100%;
+}
+span {
+    color:var(--seccolor)
+}
+h1 {
+    font-size: var(--bigfontsize);
+    font-family: "newyork", Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+h2 {
+    font-family: "newyork", Arial, Helvetica, sans-serif;
+    font-size: var(--midfontsize);
+    text-align: center;
+    width: 25vw;
+}
+p {
+    font-family: var(--n-font);
+    font-size: var(--smallfontsize);
+    color:var(--thirdcolor)
+}
+.button {
+    border: solid var(--thirdcolor) 1px;
+    padding: 3.5rem;
+    border-radius: 100%;
+    text-align: center;
+}
+
+/* nav */
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    padding: 2rem 3rem;
+    background-color: var(--bgcolor);
+    border-bottom: solid rgba(156, 156, 156, 0.089) 1px;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+nav article a{
+    margin: 0 1.2rem;
+    text-transform: uppercase;
+    font-size: var(--smallfontsize);
+}
+
+/* header */
+
+header {
+    background: url(./img/headerbg.png)no-repeat top;
+    background-color: var(--bgcolor);
+    background-size: cover;
+    background-position: 50% 0%;
+    background-size: 67.29vw;
+    background-repeat: no-repeat;
+    position: relative;
+    padding: 20rem;
+}
+
+/* header top section */
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+}
+.top-section > img {
+    height: 30vh;
+    margin-top: 15rem;
+}
+.top-section article {
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 10;
+    /* margin-top: 20rem; */
+}
+.top-section article button {
+    background-color: transparent;
+    border: solid white 1px;
+    padding: 3.5rem;
+    border-radius: 100%;
+}
+.top-section article img {
+    width: 70%;
+}
+.top-section video {
+    /* ???????????????????????????? */
+    /* height: 75%;
+    width: 100%;
+    object-fit: cover; */
+}
+
+/* header bottom section */
+
+.bottom-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.bottom-section .fashion-week {
+    display: flex;
+}
+.bottom-section .fashion-week > img {
+    width: 3vw;
+    height: 4.5vh;
+}
+.bottom-section .fashion-week div {
+    margin-left: 4rem;
+    width: 7vw;
+}
+.bottom-section .fashion-week div p {
+    margin-top: 1rem;
+}
+.bottom-section .mid-pic {
+    margin-top: 15rem;
+}
+.bottom-section .mid-pic img:nth-of-type(1) {
+    transform: translateY(-20rem);
+}
+.bottom-section .mid-pic img:nth-of-type(2) {
+    width: 60%;
+}
+.bottom-section > p {
+    color: var(--thirdcolor);
+    width: 15vw;
+}
+.bottom-section p span {
+    color: var(--maincolor);
+}
+header > img {
+    position: absolute;
+    right: 0;
+    bottom: 25rem;
+}
+
+/* main */
+
+main {
+    background-color: var(--bgcolor);
+    padding: 0 20rem;
+}
+
+/* lifestyle */
+
+.lifestyle {
+    text-align: center;
+    border-top: solid var(--thirdcolor) 1px;
+    border-bottom: solid var(--thirdcolor) 1px;
+    padding:20rem 0;
+}
+.lifestyle h3 {
+    font-size:clamp(6.25rem, 3.97rem + 6.92vw, 6.29rem);
+    font-family: var(--mainfont);
+    margin: 2rem auto;
+    width: 40vw;
+}
+.lifestyle p {
+    margin: 0 auto;
+    width: 40vw;
+    line-height: 3rem;
+    margin-bottom: 10rem;
+}
+
+/* works */
+
+.works {
+    padding-top: 5rem
+}
+
+.works h2 {
+    font-size:clamp(6.25rem, 3.97rem + 6.92vw, 6.29rem);
+    line-height: 9rem;
+    text-align: left;
+}
+.works .segment {
+    display: flex;
+    justify-content: space-between;
+}
+.works div {
+    display: flex;
+    align-items: center;
+}
+.works div div {
+    background-color: var(--maincolor);
+    height: 1px;
+    width: 10vw;
+    margin: 0 5rem;
+}
+.works div p {
+    width: 30vw;
+    color: var(--thirdcolor);
+}
+.works div a {
+    margin-left: 10rem;
+}
+
+/* works-pic's */
+
+.works .works-pic {
+    display: flex;
+    align-items: center;
+    margin-top: 10rem;
+}
+.works .works-pic img{
+    object-fit: cover;
+}
+.works .works-pic img:nth-of-type(1) {
+    width: 38vw;
+    height: 55vh;
+}
+.works .works-pic img:nth-of-type(2) {
+    width: 25vw;
+    height: 35vh;
+}
+.works .works-pic:nth-of-type(3) {
+    flex-direction: row-reverse;
+    margin: 20rem 0;
+
+}
+.works .lets-talk {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid var(--thirdcolor) 1px;
+    margin-bottom: 5rem;
+    padding-bottom: 1rem;
+}
+
+/* expertise */
+
+.expertise {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 10rem;
+}
+.expertise img:nth-of-type(1) {
+    align-self: flex-end;
+}
+.expertise article {
+    text-align: center;
+}
+.expertise article p {
+    margin-bottom: 3rem;
+}
+.expertise img:nth-of-type(2) {
+    align-self: flex-start;
+    width: 50%;
+}
+
+/* my-blogs */
+
+.my-blogs {
+    border-top: solid var(--thirdcolor) 1px;
+    padding-top: 5rem;
+}
+
+.my-blogs h2 {
+    font-size:clamp(6.25rem, 3.97rem + 6.92vw, 6.29rem);
+    line-height: 9rem;
+    text-align: left;
+}
+.my-blogs .segment {
+    display: flex;
+    justify-content: space-between;
+}
+/* .my-blogs > div {
+    display: flex;
+    align-items: center;
+} */
+.my-blogs div div {
+    background-color: var(--maincolor);
+    height: 1px;
+    width: 10vw;
+    margin: 0 5rem;
+}
+.my-blogs div p {
+    width: 20vw;
+    color: var(--thirdcolor);
+    align-items: center;
+}
+
+/* blogs */
+
+.blogs {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.5rem;
+}
+.my-blogs .blogs img{
+    height: 30vh;
+    object-fit: cover;
+    margin-bottom: 3rem;
+}
